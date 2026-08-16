@@ -1,9 +1,9 @@
-Mission 1: Welcome to the Cloud
+## Mission 1: Welcome to the Cloud
 
-Mission Overview
+## Mission Overview
 This laboratory activity helped me become familiar with the Linux cloud environment and understand the basics of cloud computing. I used KillerCoda to practice using Ubuntu and GitHub to build my cloud computing portfolio.
 
-Objectives
+## Objectives
 - Learn how to use a Linux environment through KillerCoda.
 - Practice navigating and using basic Linux commands.
 - Check basic system information.
@@ -11,7 +11,7 @@ Objectives
 - Create a GitHub repository for my cloud computing portfolio.
 - Practice documenting my work using Markdown.
 
-Activities Performed
+## Activities Performed
 - Accessed the Ubuntu Linux environment using KillerCoda.
 - Created a new Linux user and configured its permissions.
 - Checked the Linux distribution, kernel, CPU, memory, and disk space.
@@ -21,7 +21,7 @@ Activities Performed
 - Organized the laboratory files and screenshots in the repository.
 - Documented the activities and created a reflection about what I learned.
 
-Linux Commands Used
+## Linux Commands Used
 - whoami
 - pwd
 - hostname
@@ -38,7 +38,7 @@ Linux Commands Used
 - mkdir
 - find
 
-Skills Learned
+## Skills Learned
 - Using KillerCoda and Linux
 - Navigating Linux using commands
 - Creating users and managing permissions

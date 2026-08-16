@@ -1,16 +1,16 @@
-System Information
+## System Information
 
-Linux Distribution
+## Linux Distribution
 Ubuntu 24.04
 
-Kernel Version
+## Kernel Version
 6.8.0-generic
 
-CPU Information
+## CPU Information
 Intel Xeon E312xx (Sandy Bridge, IBRS update)
 
-Total Memory
+## Total Memory
 1.9GiB
 
-Available Disk Space
+## Available Disk Space
 13G

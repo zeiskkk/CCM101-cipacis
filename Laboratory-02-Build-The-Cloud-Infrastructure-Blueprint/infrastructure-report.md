@@ -2,24 +2,24 @@
 
 ## Operating System
 
-- Operating System: [your result]
+- Operating System: Ubuntu 24.04.4 LTS
 
 ## Kernel Version
 
-- Kernel Version: [your result]
+- Kernel Version: 6.8.0-138-generic
 
 ## CPU Information
 
-- CPU Model: [your result]
-- CPU Cores: [your result]
+- CPU Model: Intel Xeon E312xx (Sandy Bridge, IBRS update)
+- CPU Cores: 1
 
 ## Memory
 
-- Total RAM: [your result]
+- Total RAM: 1.9Gi
 
 ## Storage
 
-- Disk Capacity: [your result]
+- Disk Capacity: 19G
 
 ## Mounted File Systems
 

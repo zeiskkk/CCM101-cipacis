@@ -1,4 +1,5 @@
-Linux Server Assessment and Cloud Migration StrategyThis repository documents the resource investigation of a Linux server executed in the KillerCoda Playground, along with cloud migration recommendations based on the gathered hardware metrics.OverviewTerminal commands were used to assess core system parameters, including operating system release, CPU architecture, memory allocation, and disk space usage.+------------------+-------------------------------------------------------+
+#Linux Server Assessment and Cloud Migration StrategyThis repository documents the resource investigation of a Linux server executed in the KillerCoda Playground, along with cloud migration recommendations based on the gathered hardware metrics.OverviewTerminal commands were used to assess core system parameters, including operating system release, CPU architecture, memory allocation, and disk space usage.
++------------------+-------------------------------------------------------+
 | Resource         | Specification / Status                                |
 +------------------+-------------------------------------------------------+
 | OS               | Ubuntu 24.04.4 LTS (Noble Numbat)                     |

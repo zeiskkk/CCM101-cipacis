@@ -1,79 +1,27 @@
-Linux Commands Used
+Linux Server Assessment and Cloud Migration StrategyThis repository documents the resource investigation of a Linux server executed in the KillerCoda Playground, along with cloud migration recommendations based on the gathered hardware metrics.OverviewTerminal commands were used to assess core system parameters, including operating system release, CPU architecture, memory allocation, and disk space usage.+------------------+-------------------------------------------------------+
+| Resource         | Specification / Status                                |
++------------------+-------------------------------------------------------+
+| OS               | Ubuntu 24.04.4 LTS (Noble Numbat)                     |
+| CPU              | 1 vCPU (x86_64, Intel Xeon E312xx @ 2.0GHz)           |
+| Memory (RAM)     | 1.9 GiB Total (448 MiB Used / 802 MiB Free / 1.4Gi Avail) |
+| Disk Storage     | 19 GB Total (5.4 GB Used / 13 GB Avail / 30% Used)    |
++------------------+-------------------------------------------------------+
+Linux Commands Usedcat /etc/os-release – Identifies the OS distribution and version details.lscpu – Displays the server's CPU architecture and hardware details.free -h – Reports total, utilized, and available memory in human-readable units.df -h – Outlines filesystem usage, capacity, and available disk space.Captured Terminal LogsBashroot@ubuntu:~# cat /etc/os-release
+PRETTY_NAME="Ubuntu 24.04.4 LTS"
+NAME="Ubuntu"
+VERSION_ID="24.04"
+VERSION="24.04.4 LTS (Noble Numbat)"
 
-The following terminal commands were executed during the resource assessment:
+root@ubuntu:~# lscpu
+Architecture:             x86_64
+CPU(s):                   1
+Model name:               Intel Xeon E312xx (Sandy Bridge, IBRS update)
 
-cat /etc/os-release – Identifies the operating system distribution and version details.
+root@ubuntu:~# free -h
+              total        used        free      shared  buff/cache   available
+Mem:          1.9Gi       448Mi       802Mi       1.1Mi       820Mi       1.4Gi
 
-lscpu – Displays the server's CPU architecture and hardware specification.
-
-free -h – Reports total, utilized, and available memory in human-readable units.
-
-df -h – Outlines filesystem disk usage, capacity, and available storage space.
-
-System Information
-
-The analysis confirmed that the server runs Ubuntu 24.04.4 LTS (Noble Numbat) on an x86_64 architecture, equipped with 1 CPU core modeled as an Intel Xeon E312xx.
-Regarding memory allocation, the system has 1.9 GiB of total RAM, with 448 MiB active, 802 MiB free, and 1.4 GiB available. For storage, the main root partition holds 19 GB total capacity, with 5.4 GB consumed (30% usage) and approximately 13 GB remaining.
-
-Purpose of the Investigation
-
-This activity demonstrated how to evaluate a Linux server's core resources via standard CLI tools rather than a graphical interface. Measuring processor, memory, and storage metrics provides essential baseline parameters for right-sizing cloud instances during infrastructure migration.
-
-Terminal Output
-
-Bash
-cat /etc/os-release
-
-The result showed:
-Ubuntu 24.04.4 LTS (Noble Numbat)
-
-CPU Information
-The CPU was identified using:
-
-
-lscpu
-
-
-Important information from the output includes:
-Architecture: x86_64
-CPU(s): 1
-Model name: Intel Xeon E312xx (Sandy Bridge, IBRS update)
-
-Memory
-Memory was checked using:
-
-
-free -h
-
-
-The result showed:
-Total: 1.9Gi | Used: 448Mi | Free: 802Mi | Available: 1.4Gi
-
-Disk Space
-Disk space was checked using:
-
-
-df -h
-
-
-The result showed:
-Total: 19G | Used: 5.4G | Available: 13G (30% used)
-Cloud Migration Recommendation
-
-To transition away from physical hardware, this system can be deployed onto major Infrastructure as a Service (IaaS) platforms:
-
-AWS (Amazon EC2): Offers scalable Linux virtual instances, using the gathered CPU and RAM metrics to select an appropriately sized tier.
-
-Google Cloud (Compute Engine): Allows flexible VM provisioning tailored to the exact resource footprint required by the application.
-
-Microsoft Azure (Azure Virtual Machines): Supplies customizable Linux environments matching the existing compute and storage specs.
-
-Recommended Cloud Service
-
-Amazon EC2 is recommended for hosting this environment due to its extensive instance types suited for lightweight workloads (e.g., t3.micro). However, Google Compute Engine and Azure VM are equally viable options depending on organizational budget, network requirements, and performance criteria.
-
-Migration Considerations
-
-Prior to deployment, evaluate application dependencies, storage IOPS, network routing, and security configurations. Accounting for cloud usage costs, bandwidth transfer rates, and monitoring solutions early helps prevent configuration bottlenecks and unexpected expenses.
-
-Summary: The target Linux server runs Ubuntu 24.04.4 LTS with 1 vCPU, 1.9 GiB RAM, and 19 GB disk storage. It can be smoothly provisioned into AWS EC2, GCP Compute Engine, or Azure VMs to maintain identical operational capabilities in a cloud environment.
+root@ubuntu:~# df -h
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/vda1        19G  5.4G   13G  30% /
+Cloud Migration RecommendationsTransitioning this workload away from a physical or playground environment can be achieved using major cloud providers:AWS (Amazon EC2): Recommended platform using an entry-level instance (e.g., t3.micro or t4g.micro) to host the workload cost-effectively.Google Cloud (Compute Engine): Provides custom VM sizing to match the exact memory and core requirements.Microsoft Azure (Azure VMs): Offers equivalent lightweight B-series instances ideal for small scale applications.Migration ConsiderationsRight-Sizing: The workload requires minimal compute power ($\le 1\text{ vCPU}, < 2\text{ GB RAM}$).Security & Networking: Define essential Security Group ingress/egress rules before cutover.Cost Control: Utilize cloud monitoring tools to avoid unexpected charges for idle resources or data egress.

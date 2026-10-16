@@ -1,10 +1,5 @@
 # Backup Script Guide — Mission 9
 
-**Engineer:** [Your Name]
-**Date:** [Insert Date]
-**Environment:** KillerCoda Ubuntu Playground
-**Purpose:** Automated nightly backup of the client's application data
-
 ---
 
 ## 1. Full Code of `backup.sh`

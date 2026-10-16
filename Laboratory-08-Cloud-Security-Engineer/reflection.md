@@ -1,1 +1,12 @@
+# Mission 8: The Cloud Security Engineer — Reflection
+
+Completing Mission 8 helped me understand the importance of securing a cloud server and managing its network connections. I learned that a host-based firewall provides another layer of protection even if the physical network perimeter is breached. Since the firewall runs directly on the server, it can control incoming and outgoing traffic based on configured rules. This helps prevent unauthorized connections from reaching services that should not be publicly accessible.
+
+Managing open network ports is also important because every exposed service can become a possible entry point for attackers. If unnecessary ports remain open, attackers may find vulnerable applications or services to exploit. By allowing only the ports needed by the server, such as port 22 for SSH administration and port 8080 for the web application, the attack surface can be reduced. I also learned that firewall rules should be reviewed regularly to ensure that unnecessary access is removed.
+
+In a real enterprise environment, leaving a database port such as 3306 for MySQL open to the public internet is dangerous. Attackers could attempt to guess passwords, exploit database vulnerabilities, or gain unauthorized access to sensitive information. Databases should normally be placed on private networks and made accessible only to authorized application servers or administrators. Strong authentication and other security controls are also necessary.
+
+This mission changed my perspective because I realized that a newly deployed server can be exposed to security risks if its firewall and services are not configured properly. Security requires more than installing applications; it also involves checking ports, applying access rules, and verifying configurations. Using UFW helped me understand the importance of the Default Deny policy and allowing only necessary traffic.
+
+Finally, having eight completed missions in my GitHub Cloud Computing portfolio represents my progress in learning cloud computing. The activities have helped me practice Linux commands, deployment, monitoring, and security configuration. They also taught me the importance of documenting my work and keeping evidence of each task. Overall, this mission strengthened my understanding that cloud security requires continuous attention, careful configuration, and responsible administration.
 
